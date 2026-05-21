@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Maharashtra", "id": "MH" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[72.8, 18.9], [80.9, 18.9], [80.9, 21.0], [72.8, 21.0], [72.8, 18.9]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Karnataka", "id": "KA" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[74.1, 14.8], [78.5, 14.8], [78.5, 18.4], [74.1, 18.4], [74.1, 14.8]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tamil Nadu", "id": "TN" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.2, 8.1], [80.3, 8.1], [80.3, 13.5], [77.2, 13.5], [77.2, 8.1]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Delhi", "id": "DL" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.0, 28.4], [77.3, 28.4], [77.3, 28.8], [77.0, 28.8], [77.0, 28.4]]]
+      }
+    }
+  ]
+}

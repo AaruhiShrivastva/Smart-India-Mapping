@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic[email]
+pandas
+geopandas
+scikit-learn
+opencv-python
+numpy
+httpx
+python-dotenv
+sh
