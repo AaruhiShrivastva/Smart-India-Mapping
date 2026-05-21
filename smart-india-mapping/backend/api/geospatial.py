@@ -10,11 +10,18 @@ analyzer = SatelliteAnalyzer()
 @router.get("/states-data")
 async def get_states_summary():
     """Returns dummy demographic and environmental data for Indian states"""
-    states = ["Maharashtra", "Karnataka", "Delhi", "Tamil Nadu", "Uttar Pradesh", "West Bengal", "Gujarat"]
+    all_states = [
+        "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+        "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+        "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+        "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
+        "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Delhi"
+    ]
     data = []
-    for state in states:
+    for state in all_states:
         data.append({
             "name": state,
+            "id": state[:2].upper(),
             "population_density": random.randint(300, 1200),
             "pollution_index": random.randint(50, 350),
             "forest_cover": random.randint(5, 30),
@@ -22,6 +29,21 @@ async def get_states_summary():
             "healthcare_index": random.randint(40, 95)
         })
     return data
+
+@router.get("/state/{state_name}")
+async def get_state_data(state_name: str):
+    """Returns specific data for a given state"""
+    return {
+        "name": state_name,
+        "population_density": random.randint(300, 1200),
+        "pollution_index": random.randint(50, 350),
+        "forest_cover": random.randint(5, 30),
+        "traffic_congestion": random.uniform(0.1, 0.9),
+        "healthcare_index": random.randint(40, 95),
+        "urban_area_percentage": random.randint(10, 60),
+        "agricultural_productivity": random.randint(50, 95),
+        "water_quality_index": random.randint(40, 90)
+    }
 
 @router.get("/alerts")
 async def get_active_alerts():

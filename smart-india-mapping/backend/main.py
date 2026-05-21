@@ -2,14 +2,17 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
-from backend.api import geospatial, auth
-from backend.database import user_exists, create_user
+from .api import geospatial, auth
+from .database import user_exists, create_user
 
 # Initialize demo user on startup
 def init_demo_user():
-    if not user_exists("testuser", "testuser@smartindia.com"):
-        create_user("testuser", "testuser@smartindia.com", "password123")
-        print("Demo user created: testuser / password123")
+    try:
+        if not user_exists("testuser", "testuser@smartindia.com"):
+            create_user("testuser", "testuser@smartindia.com", "password123")
+            print("Demo user created: testuser / password123")
+    except Exception as e:
+        print(f"Warning: Could not create demo user: {e}")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
