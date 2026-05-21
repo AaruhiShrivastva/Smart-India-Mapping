@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "testuser",
+      "email": "testuser@smartindia.com",
+      "password": "$2b$12$fvzzzGqiMES1Gb/tJgHzheOig472/i./kjYWF4xoNOMLo0lzcD2W6"
+    },
+    {
+      "id": 2,
+      "username": "newuser1",
+      "email": "newuser1@test.com",
+      "password": "$2b$12$Is4ywmV3yElTxT.w7g8hS.U9ZkFhxi4IVq0DlcdqDk6mnb0Bij06K"
+    },
+    {
+      "id": 3,
+      "username": "newuser4",
+      "email": "newuser4@smartindia.com",
+      "password": "$2b$12$ZiobUrTB9h6ZOC.ZEDLMvOE.gHQvSG/xLVp7S/K0FEaz7UZwQERza"
+    },
+    {
+      "id": 4,
+      "username": "newuser",
+      "email": "newuser@smartindia.com",
+      "password": "$2b$12$0917ltKMTbi4bQ1Jn2lvMeD7bIZNnp4KA4AcTlY/s6pMXtbYs5Yna"
+    }
+  ]
+}
